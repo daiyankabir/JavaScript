@@ -22,16 +22,33 @@
 
 
 //Bus Ticket Price
-const age = 18;
-const profession = 'student';
+// const age = 18;
+// const profession = 'student';
 
-if (age < 10) { console.log('Ticket Free'); }
+// if (age < 10) { console.log('Ticket Free'); }
 
-else if (age >= 10 && age < 60) {
-    if (profession === 'student') { console.log('50% discount'); }
-    else { console.log('Regular ticket fare 800 tk'); }
-}
+// else if (age >= 10 && age < 60) {
+//     if (profession === 'student') { console.log('50% discount'); }
+//     else { console.log('Regular ticket fare 800 tk'); }
+// }
 
-else if (age >= 60) { console.log('20% discount'); }
+// else if (age >= 60) { console.log('20% discount'); }
 
-else { console.log('Regular ticket fare 800 tk'); }
+// else { console.log('Regular ticket fare 800 tk'); }
+
+//Concat two arrays
+
+// const firstArray = [1, 2, 3, 4, 5];
+
+// const secondArray = [6, 7, 8, 9, 10];
+
+// const combinedArray = [...firstArray, ...secondArray];
+// const combinedArray = firstArray.concat(secondArray);
+
+// console.log(combinedArray);
+// const firstStr = 'Hello';
+// const secondStr = 'World';
+
+// const combinedStr = firstStr + ' ' + secondStr;
+
+// console.log(combinedStr);
