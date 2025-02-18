@@ -1,26 +1,78 @@
-//Problem 1
+
 function cashOut(money) {
-    // You have to write your code here
+    if (money < 0 || typeof (money) != 'number') {
+        return 'Invalid';
+    }
+    const charge = money * (1.75 / 100);
+    return charge;
 }
+
 
 //problem 2
 function validEmail(email) {
-    // You have to write your code here
+    if (typeof (email) != 'string') {
+        return "Invalid";
+    }
+    const specialChar = ['.', '@', '-', '_', '+'];
+    if (email.includes('@') && email.includes('.com') && !email.includes(' ')) {
+        if (!specialChar.some(char => email.startsWith(char)) && email.endsWith('.com')) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    return false;
+
 }
 
-//problem 3
+
 function electionResult(votes) {
-    // You have to write your code here
+    if (!Array.isArray(votes) || !votes.every(item => typeof item === 'string')) {
+        return 'Invalid';
+    }
+    const mangoCount = votes.filter(vote => vote === 'mango').length;
+    const bananaCount = votes.filter(vote => vote === 'banana').length;
+
+    if (mangoCount > bananaCount) {
+        return 'Mango';
+    }
+    if (bananaCount > mangoCount) {
+        return 'Banana';
+    }
+    return 'Draw';
 }
 
-//problem 4
+
 function isBestFriend(f1, f2) {
-    // You have to write your code here
+    if (typeof (f1) != 'object' || typeof (f2) != 'object') {
+        return 'Invalid';
+    }
+    if (f1.roll === f2.bestFriend && f2.roll === f1.bestFriend) {
+        return true;
+    }
+    return false;
 }
-
 
 
 //problem 5
 function calculateWatchTime(times) {
-    // You have to write your code here
+    if (!Array.isArray(times) || !times.every(item => typeof item === 'number')) {
+        return 'Invalid';
+    }
+    let watchTime = 0;
+    for (let i = 0; i < times.length; i++) {
+        watchTime += times[i];
+    }
+    const watchTimeInHours = parseInt(watchTime / 3600);
+    const watchTimeInMinutes = parseInt((watchTime % 3600) / 60);
+    const watchTimeInSeconds = watchTime % 60;
+    const watchTimeInDays = {
+        hour: watchTimeInHours,
+        minute: watchTimeInMinutes,
+        second: watchTimeInSeconds
+    }
+    return watchTimeInDays;
+
 }
+
