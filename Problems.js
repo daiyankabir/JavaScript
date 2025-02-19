@@ -8,7 +8,7 @@ function cashOut(money) {
 }
 
 
-//problem 2
+
 function validEmail(email) {
     if (typeof (email) != 'string') {
         return "Invalid";
@@ -55,7 +55,6 @@ function isBestFriend(f1, f2) {
 }
 
 
-//problem 5
 function calculateWatchTime(times) {
     if (!Array.isArray(times) || !times.every(item => typeof item === 'number')) {
         return 'Invalid';
